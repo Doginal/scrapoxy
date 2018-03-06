@@ -107,7 +107,7 @@ module.exports = class Commander {
     listen() {
         return new Promise((resolve, reject) => {
             // Start server
-            this._server = this._httpServer.listen(this._config.commander.port, (err) => {
+            this._server = this._httpServer.listen(this._config.commander.port, this._config.commander.ip, (err) => {
                 if (err) {
                     return reject(
                         new Error(`[Commander] Cannot listen at port ${this._config.commander.port}:${err.toString()}`)

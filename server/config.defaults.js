@@ -9,6 +9,7 @@ module.exports = {
 
     commander: {
         port: 8889,
+        ip: '*',
     },
 
     instance: {
